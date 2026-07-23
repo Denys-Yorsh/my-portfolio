@@ -1,0 +1,152 @@
+/* Базові стилі */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --card-bg: #f4f4f9;
+    --primary-color: #007bff;
+}
+
+body.dark-theme {
+    --bg-color: #1e1e1e;
+    --text-color: #f4f4f9;
+    --card-bg: #2d2d2d;
+    --primary-color: #375a7f;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Навігація */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--card-bg);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.btn-theme {
+    padding: 8px 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Hero Секція */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+/* Проєкти (Grid / Адаптив) */
+.projects {
+    padding: 20px;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.btn-like {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--text-color);
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* Форма */
+.contact {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-submit {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.status-msg {
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
+}
+
+/* Підвал */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--card-bg);
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

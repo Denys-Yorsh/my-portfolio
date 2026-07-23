@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моє Портфоліо</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайту -->
+    <header class="header">
+        <div class="logo">Портфоліо</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">Про мене</a></li>
+                <li><a href="#projects">Проєкти</a></li>
+                <li><a href="#contact">Контакти</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" class="btn-theme">🌙 Темна тема</button>
+    </header>
+
+    <!-- Головна секція -->
+    <main>
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <img src="https://via.placeholder.com/150" alt="Аватар веб-розробника" class="profile-img">
+                <h1>Привіт, я Web Developer 👋</h1>
+                <p>Я створюю сучасні, адаптивні та зручні веб-сайти.</p>
+            </div>
+        </section>
+
+        <!-- Секція проєктів -->
+        <section id="projects" class="projects">
+            <h2>Мої Проєкти</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Прев'ю першого проєкту з верстки сайту">
+                    <h3>Веб-сайт компанії</h3>
+                    <p>Адаптивний сайт, виконаний за допомогою HTML5 та CSS3.</p>
+                    <button class="btn-like">❤️ Уподобати (<span class="like-count">0</span>)</button>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Прев'ю проєкту інтерактивного веб-додатку">
+                    <h3>Веб-додаток</h3>
+                    <p>Інтерактивний додаток з використанням JavaScript та API.</p>
+                    <button class="btn-like">❤️ Уподобати (<span class="like-count">0</span>)</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Форма зворотного зв'язку -->
+        <section id="contact" class="contact">
+            <h2>Зв'язатися зі мною</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Ваше ім'я" required>
+                <input type="email" id="email" placeholder="Ваш Email" required>
+                <textarea id="message" placeholder="Ваше повідомлення" rows="4" required></textarea>
+                <button type="submit" class="btn-submit">Надіслати</button>
+            </form>
+            <p id="form-status" class="status-msg"></p>
+        </section>
+    </main>
+
+    <!-- Підвал -->
+    <footer>
+        <p>&copy; 2026 Усі права захищені.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
